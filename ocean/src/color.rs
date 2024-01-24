@@ -34,6 +34,11 @@ impl Color {
      * https://doc.rust-lang.org/std/primitive.u8.html
      */
     pub fn cross(c1: &Color, c2: &Color) -> Color {
-        unimplemented!();
+        let c3 = Color {
+            r: (c1.r).wrapping_add(c2.r),
+            g: (c1.g).wrapping_add(c2.g),
+            b: (c1.b).wrapping_add(c2.b)
+        };
+        c3
     }
 }
